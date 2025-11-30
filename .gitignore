@@ -1,0 +1,24 @@
+# Visual Studio temporary files
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider/IntelliJ IDEA
+.idea/
+
+# Visual Studio Code
+.vscode/
+
+# Build results
+*.dll
+*.exe
+*.log
+*.pdb
+
+# NuGet packages
+*.nupkg
+packages/

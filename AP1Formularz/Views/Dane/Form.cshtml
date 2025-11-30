@@ -1,0 +1,61 @@
+﻿@model AP1Formularz.Models.Dane
+
+@{
+    ViewData["Title"] = "Formularz rejestracyjny";
+}
+
+<h2>Formularz rejestracyjny</h2>
+
+<form asp-action="Form" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <label>Imię:</label>
+    <input asp-for="Imie" class="form-control" />
+    <span asp-validation-for="Imie" class="text-danger"></span>
+    <br />
+
+    <label>Nazwisko:</label>
+    <input asp-for="Nazwisko" class="form-control" />
+    <span asp-validation-for="Nazwisko" class="text-danger"></span>
+    <br />
+
+    <label>Email:</label>
+    <input asp-for="Email" type="email" class="form-control" />
+    <span asp-validation-for="Email" class="text-danger"></span>
+    <br />
+
+    <label>Hasło:</label>
+    <input asp-for="Haslo" type="password" class="form-control" />
+    <span asp-validation-for="Haslo" class="text-danger"></span>
+    <br />
+
+    <label>Potwierdzenie hasła:</label>
+    <input asp-for="PotwierdzenieHasla" type="password" class="form-control" />
+    <span asp-validation-for="PotwierdzenieHasla" class="text-danger"></span>
+    <br />
+
+    <label>Telefon:</label>
+    <input asp-for="Telefon" type="tel" class="form-control" />
+    <span asp-validation-for="Telefon" class="text-danger"></span>
+    <br />
+
+    <label>Wiek:</label>
+    <input asp-for="Wiek" type="text" class="form-control" />
+    <span asp-validation-for="Wiek" class="text-danger"></span>
+    <br />
+
+    <label>Miasto:</label>
+    <select asp-for="Miasto"
+            asp-items="Html.GetEnumSelectList<AP1Formularz.Models.Dane.Miasta>()"
+            class="form-select">
+    </select>
+    <span asp-validation-for="Miasto" class="text-danger"></span>
+    <br />
+
+    <button type="submit" class="btn btn-primary">Zarejestruj</button>
+    <button type="reset" class="btn btn-secondary">Wyczyść</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

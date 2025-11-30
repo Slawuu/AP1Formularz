@@ -1,0 +1,18 @@
+﻿@model AP1Formularz.Models.Dane
+
+@{
+    ViewData["Title"] = "Wynik rejestracji";
+}
+
+<h1>Rejestracja zakończona pomyślnie</h1>
+
+<p>Potwierdzam Twoje dane:</p>
+
+<ul>
+    <li><strong>Imię:</strong> @Model.Imie</li>
+    <li><strong>Nazwisko:</strong> @Model.Nazwisko</li>
+    <li><strong>Email:</strong> @Model.Email</li>
+    <li><strong>Telefon:</strong> @Model.Telefon</li>
+    <li><strong>Wiek:</strong> @Model.Wiek</li>
+    <li><strong>Miasto:</strong> @Model.Miasto</li>
+</ul>
